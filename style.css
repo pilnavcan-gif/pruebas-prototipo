@@ -77,17 +77,17 @@ header img {
 }
 
 .mi-boton:hover {
-
     background-color:#cF4E63; 
     cursor: pointer; 
 }
 .menu-tabs {
+  position: relative; /* Necesario para posicionar el slider dentro */
   display: flex;
-  gap: 25px;
+  gap:100px;
   padding: 10px 20px;
   background: white;
   border-radius: 50px;
-  align-items: center;
+  align-items: left;
 }
 
 .tab {
@@ -105,6 +105,18 @@ header img {
 }
 
 .tab.active {
-  background: #d14963;
+  background: #cF4E63;
   color: white;
+}
+
+.slider {
+  position: absolute;
+  /* La altura será el 100% del padding del contenedor */
+  height: calc(100% - 20px); /* 100% menos el padding vertical (10px arriba + 10px abajo) */
+  background: #cF4E63;
+  border-radius: 25px;
+  top: 10px; /* Coincide con el padding-top del .menu-tabs */
+  left: 0; /* El JS lo sobreescribirá */
+  transition: 0.3s ease;
+  z-index: -1; /* Para que se quede detrás del texto de las pestañas */
 }
