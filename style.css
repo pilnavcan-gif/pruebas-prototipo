@@ -81,3 +81,30 @@ header img {
     background-color:#cF4E63; 
     cursor: pointer; 
 }
+.menu-tabs {
+  display: flex;
+  gap: 25px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 50px;
+  align-items: center;
+}
+
+.tab {
+  padding: 10px 25px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.tab:hover {
+  background: #e5e5e5;
+}
+
+.tab.active {
+  background: #d14963;
+  color: white;
+}
